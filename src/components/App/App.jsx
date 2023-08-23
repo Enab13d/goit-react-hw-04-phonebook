@@ -6,7 +6,7 @@ import { ContactList } from '../ContactList';
 import { Wrapper } from './App.styled';
 
 export const App = () => {
-  const [contacts, setContacts] = useState(() => getContactsFromLocalStorage());
+  const [contacts, setContacts] = useState(() => getContactsFromLocalStorage() ?? []);
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
