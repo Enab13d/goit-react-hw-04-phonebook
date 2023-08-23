@@ -40,10 +40,13 @@ export const App = () => {
     if (isContain) {
       return alert(`${value} is already in contacts.`);
     }
+    console.log(number.value);
+    const tel = number.value;
     setContacts(prevContacts => [
       ...prevContacts,
-      { name: value, number: number.value, id },
+      { name: value, number: tel, id },
     ]);
+    console.log(contacts);
     e.target.reset();
   };
   const getFoundContacts = () => {
